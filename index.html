@@ -31,53 +31,73 @@
     <div class="container">
       <!-- Timeblocks go here -->
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>7 am</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>8 am</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>9 am</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>10 am</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>11 am</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>12 pm</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>1 pm</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>2 pm</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
         <div class ="row">  
-          <div class="col-2"></div>
+          <div class="col-2"><h5>3 pm</h5></div>
+          <div class="col-8"><textarea wrap="off"></textarea></div>
+          <div class="col-2 saveblock"></div>
+        </div>
+        <div class ="row">  
+          <div class="col-2"><h5>4 pm</h5></div>
           <div class="col-8"><textarea wrap="off"></textarea></div>
           <div class="col-2 saveblock"></div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+
+    var buttonSave = $("<button>");
+    buttonSave.addClass("s-button s-button-color");
+    $("saveblock").append(buttonSave); 
+    console.log(buttonSave);
+    
+    $(".s-button").on("click", function() {
+      //save to local storage
+    }
+    
+    
+    
+  
+  
+  </script>
   </body>
 </html>

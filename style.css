@@ -76,14 +76,7 @@ textarea{
   border-left-style: none;
 }
 .col-8 {
-  background-color:rgb(216, 214, 214);
 }
 .saveblock {
   background-color:rgb(89, 166, 211);
-}
-textarea {
-  outline: none;
-  overflow: auto;
-  resize: both;
-
 }

@@ -30,6 +30,7 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <!-- added hour, text, button block with respective classes-->
       <div class="row" id="hour-7">
         <div class="col-2 time-block hour"><h5>7 am</h5></div>
         <textarea class="col-8 hour" wrap="off" id="7" data-num="07"></textarea>
@@ -38,152 +39,55 @@
       <div class="row" id="hour-8">
         <div class="col-2 time-block hour"><h5>8 am</h5></div>
         <textarea class="col-8 hour" wrap="off" id="8" data-num="08"></textarea>
-        <button class="col-2 saveBtn"></button>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour9">
         <div class="col-2 time-block hour"><h5>9 am</h5></div>
         <textarea class="col-8 hour" wrap="off" id="9" data-num="09"></textarea>
-        <button class="col-2 saveBtn"></button>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="hour-10">
         <div class="col-2 time-block hour"><h5>10 am</h5></div>
         <textarea class="col-8 hour" wrap="off" id="10" data-num="10"></textarea>
-        <button class="col-2 saveBtn"></button>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour11">
         <div class="col-2 time-block hour"><h5>11 am</h5></div>
         <textarea class="col-8 hour" wrap="off" id="11" data-num="11"></textarea>
-        <button class="col-2 saveBtn"></button>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour12">
         <div class="col-2 time-block hour"><h5>12 pm</h5></div>
-        <textarea
-          class="col-8 hour"
-          wrap="off"
-          id="12"
-          data-num="12"
-        ></textarea>
-        <button class="col-2 saveBtn"></button>
+        <textarea class="col-8 hour" wrap="off" id="12" data-num="12"></textarea>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour1">
         <div class="col-2 time-block hour"><h5>1 pm</h5></div>
-        <textarea
-          class="col-8 hour"
-          wrap="off"
-          id="13"
-          data-num="1"
-        ></textarea>
-        <button class="col-2 saveBtn"></button>
+        <textarea class="col-8 hour" wrap="off" id="13" data-num="1"></textarea>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour2">
         <div class="col-2 time-block hour"><h5>2 pm</h5></div>
-        <textarea
-          class="col-8 hour"
-          data-num="2"
-          wrap="off"
-          id="14"
-        ></textarea>
-        <button class="col-2 saveBtn"></button>
+        <textarea class="col-8 hour" data-num="2" wrap="off" id="14"></textarea>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour3">
         <div class="col-2 time-block hour"><h5>3 pm</h5></div>
-        <textarea
-          class="col-8 hour"
-          data-num="3"
-          wrap="off"
-          id="15"
-        ></textarea>
-        <button class="col-2 saveBtn"></button>
+        <textarea class="col-8 hour" data-num="3" wrap="off" id="15"></textarea>
+        <button class="col-2 saveBtn">save</button>
       </div>
       <div class="row" id="Hour4">
         <div class="col-2 time-block hour"><h5>4 pm</h5></div>
-        <textarea
-          class="col-8 hour"
-          data-num="4"
-          wrap="off"
-          id="16"
-        ></textarea>
-        <button class="col-2 saveBtn"></button>
+        <textarea class="col-8 hour" data-num="4" wrap="off" id="16"></textarea>
+        <button class="col-2 saveBtn">save</button>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-    <script>
-
-        // var $currentDay = $("#currentDay");
-        // var notes = getNotes();
-        // var interval = setInterval(setTime, 1000);
-      
-        // function SetTime() {
-        // var date = moment().format("dddd, MMMM Do YYYY, k:mm:ss");
-        // $currentDay.innerHTML = date;
-        // $("#currentDay").text(date);
-        // }
-      
-      renderNotes();
-
-      $(".saveBtn").on("click", function(e) {
-        e.preventDefault();
-        var toDoList = $(this)
-          .siblings("col-8")
-          .val();
-        var hour = $(this)
-          .siblings("col-8")
-          .attr("id");
-        notes[hour] = toDoList;
-
-        
-        localStorage.setItem("notes", JSON.stringify(notes));
-         });
-
-
-      function getNotes() {
-        var notes = localStorage.getItem("notes");
-        if (notes) {
-          notes = JSON.parse(notes);
-        } else {
-          notes = {};
-        }
-        return notes;
-      }
-
-
-      function renderNotes (){
-        for ( var key in notes) {
-          $("#" + key).val(notes[key]);
-        }
-      };
-
-
-      //color change on hours 
-
-      $(".hour").each(function() {
-        $(this)
-          .removeClass("present")
-          .removeClass("future")
-          .removeClass("past");
-
-        var currentHour = moment().format("h");
-        var dataNum = $(this).attr("data-num");
-        console.log(dataNum);
-        console.log(currentHour);
-
-        if (dataNum < currentHour) {
-          $(this).addClass("past");
-        }
-        if (dataNum === currentHour) {
-          $(this).addClass("present");
-        }
-
-        if (dataNum > currentHour) {
-          $(this).addClass("future");
-        }
-      });
-
+    <script type="text/javascript"></script>
     
-      
-    </script>
+    <script src="./javascript.js"></script>
+   
   </body>
 </html>
